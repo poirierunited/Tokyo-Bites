@@ -1,8 +1,8 @@
 const express = require("express");
 const AsyncHandler = require("express-async-handler");
-const Product = require("../models/Product");
-const generateToken = require("../tokenGenerate");
-const protect = require("../middleware/Auth");
+const Product = require("../models/Product.js");
+const generateToken = require("../tokenGenerate.js");
+const protect = require("../middleware/Auth.js");
 const { default: mongoose } = require("mongoose");
 const productRoute = express.Router();
 

@@ -3,9 +3,9 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const databaseSeeder = require("./databaseSeeder");
-const userRoute = require("./routes/User");
-const productRoute = require("./routes/Product");
+const databaseSeeder = require("./databaseSeeder.js");
+const userRoute = require("./routes/User.js");
+const productRoute = require("./routes/Product.js");
 
 const app = express();
 
@@ -33,19 +33,6 @@ app.use("/api/users", userRoute);
 
 // products route
 app.use("/api/products", productRoute);
-
-// order route
-app.use("/api/orders", orderRoute);
-
-// report route
-app.use("/api/reports", reportRoute);
-
-app.use("/api/tableproduct", tableproductRoute);
-
-// paypal payment api for client key;
-app.use("/api/config/paypal", (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID);
-});
 
 app.listen(PORT || 9000, () => {
   console.log(`App listening in port: ${PORT}`);
