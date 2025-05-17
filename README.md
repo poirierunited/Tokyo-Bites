@@ -10,4 +10,4 @@ npm install bcryptjs dotenv express express-async-handler jsonwebtoken mongoose 
 
 
 
-// add here necessary info to run the project
+// add here necessary info to run the project in local
