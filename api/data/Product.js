@@ -8,6 +8,13 @@ const products = [
       countInStock: 4,
       rating: 4.5,
       numReview: 10,
+      reviews: [
+        {
+          name: "John Doe",
+          rating: 4.5,
+          comment: "description of review 1",
+        },
+      ],
     },
     {
       name: "Product 2",
@@ -18,6 +25,13 @@ const products = [
       countInStock: 12,
       rating: 4.0,
       numReview: 24,
+      reviews: [
+        {
+          name: "John Doe",
+          rating: 4.5,
+          comment: "description of review 2",
+        },
+      ],
     },
   ];
   

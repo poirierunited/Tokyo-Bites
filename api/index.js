@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 
@@ -9,7 +10,6 @@ const productRoute = require("./routes/Product.js");
 
 const app = express();
 
-dotenv.config();
 const PORT = process.env.PORT;
 const MONGO_DB = process.env.MONGO_DB;
 

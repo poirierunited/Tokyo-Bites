@@ -3,6 +3,7 @@ const AsyncHandler = require("express-async-handler");
 const User = require("../models/User.js");
 const generateToken = require("../tokenGenerate.js");
 const userRoute = express.Router();
+const protect = require("../middleware/Auth");
 
 // User login route
 userRoute.post(
@@ -81,6 +82,32 @@ userRoute.post(
       } else {
         res.status(400).json({ message: "Invalid User Data" });
       }
+    }
+  })
+);
+
+userRoute.get(
+  "/get-user/:id",
+  protect,
+  AsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+
+    if (user) {
+      res.json({
+        // _id: user.id,
+        run: user.run,
+        name: user.name,
+        lastname: user.lastname,
+        region: user.region,
+        city: user.city,
+        address: user.address,
+        phoneNumber: user.phoneNumber,
+        email: user.email,
+        isAdmin: user.isAdmin,
+        createdAt: user.createdAt,
+      });
+    } else {
+      res.status(404).json({ message: "Usuario no encontrado" });
     }
   })
 );
