@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const databaseSeeder = require("./databaseSeeder.js");
 const userRoute = require("./routes/User.js");
 const productRoute = require("./routes/Product.js");
+const tableproductRoute = require("./routes/Tableproducts.js");
 
 const app = express();
 
@@ -33,6 +34,9 @@ app.use("/api/users", userRoute);
 
 // products route
 app.use("/api/products", productRoute);
+
+// table product routes
+app.use("/api/tableproduct", tableproductRoute);
 
 app.listen(PORT || 9000, () => {
   console.log(`App listening in port: ${PORT}`);

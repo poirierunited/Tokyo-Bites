@@ -1,11 +1,9 @@
-import flowbitePlugin from "flowbite/plugin";
-import flowbiteAspectRatio from "@tailwindcss/aspect-ratio";
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
+    "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
-    "node_modules/flowbite-react/lib/esm/**/*.js",
+    "./node_modules/flowbite-react/lib/esm/**/*.js",
   ],
   theme: {
     extend: {
@@ -14,5 +12,11 @@ export default {
       },
     },
   },
-  plugins: [flowbitePlugin, flowbiteAspectRatio],
+  plugins: [
+    require('flowbite/plugin'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
+  corePlugins: {
+    preflight: true,
+  },
 };
