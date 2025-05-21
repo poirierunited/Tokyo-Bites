@@ -22,12 +22,12 @@ const Navbar = () => {
             {/* Logo y Nombre */}
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/fukusuke-logo.png"
+                src="/LOGO-Tokyo-bites.png"
                 className="w-16 h-16 sm:w-20 sm:h-20 rounded-full"
-                alt="Fukusuke Logo"
+                alt="Tokyo Bites logo"
               />
               <span className="text-xl sm:text-3xl font-extrabold text-white whitespace-nowrap dark:text-slate-600 hidden sm:block">
-                Fukusuke Sushi
+                Tokyo Bites
               </span>
             </Link>
 
@@ -52,12 +52,12 @@ const Navbar = () => {
             {/* Logo y Nombre */}
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/fukusuke-logo.png"
+                src="/LOGO-Tokyo-bites.png"
                 className="w-16 h-16 sm:w-20 sm:h-20 rounded-full"
-                alt="Fukusuke Logo"
+                alt="Tokyo Bites logo"
               />
               <span className="text-xl sm:text-3xl font-extrabold text-white whitespace-nowrap dark:text-slate-600 hidden sm:block">
-                Fukusuke Sushi
+                Tokyo Bites
               </span>
             </Link>
 
