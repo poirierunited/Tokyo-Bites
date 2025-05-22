@@ -41,7 +41,7 @@ const Footer = () => {
                     className="h-5 mb-2 mt-2"
                     alt="Instagram Logo"
                   />
-                  <a href="#" className="hover:underline mt-2 ml-1">@Fukusuke_Sushi</a>
+                  <a href="#" className="hover:underline mt-2 ml-1">@Tokyo_bites</a>
                 </div>
                 <div className="flex item-center">
                   <img
@@ -57,7 +57,7 @@ const Footer = () => {
                     className="h-5 "
                     alt="Facebook Logo"
                   />
-                  <a href="#" className="hover:underline ml-1">Fukusuke Sushi</a>
+                  <a href="#" className="hover:underline ml-1">Tokyo Bites</a>
                 </div>
                 
               </li>
@@ -70,19 +70,19 @@ const Footer = () => {
           >
             
             <img
-              src="/fukusuke-logo.png"
+              src="/LOGO-Tokyo-bites.png"
               className="w-16 h-16 rounded-full "
-              alt="Fukusuke Logo"
+              alt="Tokyo Bites Logo"
             />
             <span className="self-center text-white text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Fukusuke Sushi
+              Tokyo Bites
             </span>
           </a>
           <span className="block text-sm text-black sm:text-center dark:text-gray-400">
             <a href="/" className="hover:underline">
-              Los Santiago Boys Inc
+              Tokyo Bites Inc
             </a>
-            . Todos los derechos reservados. © 2024{" "}
+            . Todos los derechos reservados. © 2025{" "}
           </span>
         </div>
       </footer>
