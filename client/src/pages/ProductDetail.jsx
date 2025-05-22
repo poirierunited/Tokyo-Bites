@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { productAction } from "../Redux/Actions/Product";
 import Layout from "../Layouts/Layouts";
 
 // Component to display product details
@@ -10,6 +11,10 @@ function ProductDetail() {
   const dispatch = useDispatch();
   const productReducer = useSelector((state) => state.productReducer);
   const { loading, error, product } = productReducer;
+
+  useEffect(() => {
+    dispatch(productAction(id));
+  }, [dispatch, id]);
 
   const [qty, setQty] = useState(1);
 
@@ -155,10 +160,9 @@ function ProductDetail() {
                       <span className="title-font font-medium text-2xl text-gray-900">
                         ${product.price}
                       </span>
-                      {/* boton para agregar al carrito */}
+                      {/* boton para agregar al carrito TODO! */}
                       {product.countInStock > 0 ? (
                         <button
-                          onClick={addToCartHandler}
                           className="flex ml-auto text-white bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 rounded"
                         >
                           Agregar al carrito de compras
