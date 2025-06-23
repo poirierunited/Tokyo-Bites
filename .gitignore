@@ -7,3 +7,5 @@ node_modules/
 # Dependencies
 /package-lock.json
 /yarn.lock
+client/package-lock.json
+package.json
